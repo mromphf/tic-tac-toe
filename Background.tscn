@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://gdim78m0ndhk"]
+
+[ext_resource type="Texture2D" uid="uid://lp8aoyvu8d1m" path="res://graphics/tic-tac-toe.svg" id="1_r1cxf"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_punt0"]
+
+[node name="Background" type="Node2D"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_left = -16.0
+offset_top = -16.0
+offset_right = 1181.0
+offset_bottom = 662.0
+texture = SubResource("CanvasTexture_punt0")
+
+[node name="Tic-tac-toe" type="Sprite2D" parent="."]
+position = Vector2(592, 328)
+texture = ExtResource("1_r1cxf")
