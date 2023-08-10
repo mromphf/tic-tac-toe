@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://cvrggtwkp1rr5"]
+
+[ext_resource type="Script" path="res://Space.gd" id="1_qcyhg"]
+
+[node name="Space" type="TextureButton"]
+offset_left = -78.0
+offset_top = -71.0
+offset_right = 75.0
+offset_bottom = 78.0
+script = ExtResource("1_qcyhg")

@@ -14,3 +14,7 @@ config/name="Tic-tac-toe 4"
 run/main_scene="res://main.tscn"
 config/features=PackedStringArray("4.1", "Forward Plus")
 config/icon="res://graphics/icon.svg"
+
+[filesystem]
+
+import/blender/enabled=false
