@@ -77,3 +77,13 @@ offset_right = 844.0
 offset_bottom = 576.0
 size_flags_horizontal = 0
 ord = 9
+
+[connection signal="space_pressed" from="TOP_RIGHT" to="." method="_on_space_pressed"]
+[connection signal="space_pressed" from="TOP_CENTER" to="." method="_on_space_pressed"]
+[connection signal="space_pressed" from="TOP_LEFT" to="." method="_on_space_pressed"]
+[connection signal="space_pressed" from="MID_LEFT" to="." method="_on_space_pressed"]
+[connection signal="space_pressed" from="MID_CENTER" to="." method="_on_space_pressed"]
+[connection signal="space_pressed" from="MID_RIGHT" to="." method="_on_space_pressed"]
+[connection signal="space_pressed" from="BOT_LEFT" to="." method="_on_space_pressed"]
+[connection signal="space_pressed" from="BOT_CENTER" to="." method="_on_space_pressed"]
+[connection signal="space_pressed" from="BOT_RIGHT" to="." method="_on_space_pressed"]
