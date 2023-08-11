@@ -4,33 +4,43 @@
 [ext_resource type="PackedScene" uid="uid://gdim78m0ndhk" path="res://Background.tscn" id="2_p3bm5"]
 [ext_resource type="PackedScene" uid="uid://cvrggtwkp1rr5" path="res://Space.tscn" id="3_37r0c"]
 
-[node name="Main2" type="Node2D"]
+[node name="Main2" type="Node2D" groups=["Spaces"]]
 script = ExtResource("1_mjg8f")
 
 [node name="Background" parent="." instance=ExtResource("2_p3bm5")]
 
-[node name="TOP_RIGHT" parent="." instance=ExtResource("3_37r0c")]
+[node name="Container" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="TOP_RIGHT" parent="Container" instance=ExtResource("3_37r0c")]
+layout_mode = 2
 offset_left = 687.0
 offset_top = 81.0
 offset_right = 840.0
 offset_bottom = 230.0
 ord = 3
 
-[node name="TOP_CENTER" parent="." instance=ExtResource("3_37r0c")]
+[node name="TOP_CENTER" parent="Container" instance=ExtResource("3_37r0c")]
+layout_mode = 2
 offset_left = 516.0
 offset_top = 80.0
 offset_right = 669.0
 offset_bottom = 229.0
 ord = 2
 
-[node name="TOP_LEFT" parent="." instance=ExtResource("3_37r0c")]
+[node name="TOP_LEFT" parent="Container" instance=ExtResource("3_37r0c")]
+layout_mode = 2
 offset_left = 343.0
 offset_top = 80.0
 offset_right = 496.0
 offset_bottom = 229.0
 ord = 1
 
-[node name="MID_LEFT" parent="." instance=ExtResource("3_37r0c")]
+[node name="MID_LEFT" parent="Container" instance=ExtResource("3_37r0c")]
+layout_mode = 2
 offset_left = 347.0
 offset_top = 251.0
 offset_right = 500.0
@@ -38,7 +48,8 @@ offset_bottom = 400.0
 size_flags_horizontal = 0
 ord = 4
 
-[node name="MID_CENTER" parent="." instance=ExtResource("3_37r0c")]
+[node name="MID_CENTER" parent="Container" instance=ExtResource("3_37r0c")]
+layout_mode = 2
 offset_left = 515.0
 offset_top = 249.0
 offset_right = 668.0
@@ -46,7 +57,8 @@ offset_bottom = 398.0
 size_flags_horizontal = 0
 ord = 5
 
-[node name="MID_RIGHT" parent="." instance=ExtResource("3_37r0c")]
+[node name="MID_RIGHT" parent="Container" instance=ExtResource("3_37r0c")]
+layout_mode = 2
 offset_left = 691.0
 offset_top = 249.0
 offset_right = 844.0
@@ -54,7 +66,8 @@ offset_bottom = 398.0
 size_flags_horizontal = 0
 ord = 6
 
-[node name="BOT_LEFT" parent="." instance=ExtResource("3_37r0c")]
+[node name="BOT_LEFT" parent="Container" instance=ExtResource("3_37r0c")]
+layout_mode = 2
 offset_left = 340.0
 offset_top = 427.0
 offset_right = 493.0
@@ -62,7 +75,8 @@ offset_bottom = 576.0
 size_flags_horizontal = 0
 ord = 7
 
-[node name="BOT_CENTER" parent="." instance=ExtResource("3_37r0c")]
+[node name="BOT_CENTER" parent="Container" instance=ExtResource("3_37r0c")]
+layout_mode = 2
 offset_left = 515.0
 offset_top = 425.0
 offset_right = 668.0
@@ -70,7 +84,8 @@ offset_bottom = 574.0
 size_flags_horizontal = 0
 ord = 8
 
-[node name="BOT_RIGHT" parent="." instance=ExtResource("3_37r0c")]
+[node name="BOT_RIGHT" parent="Container" instance=ExtResource("3_37r0c")]
+layout_mode = 2
 offset_left = 691.0
 offset_top = 427.0
 offset_right = 844.0
@@ -78,12 +93,12 @@ offset_bottom = 576.0
 size_flags_horizontal = 0
 ord = 9
 
-[connection signal="space_pressed" from="TOP_RIGHT" to="." method="_on_space_pressed"]
-[connection signal="space_pressed" from="TOP_CENTER" to="." method="_on_space_pressed"]
-[connection signal="space_pressed" from="TOP_LEFT" to="." method="_on_space_pressed"]
-[connection signal="space_pressed" from="MID_LEFT" to="." method="_on_space_pressed"]
-[connection signal="space_pressed" from="MID_CENTER" to="." method="_on_space_pressed"]
-[connection signal="space_pressed" from="MID_RIGHT" to="." method="_on_space_pressed"]
-[connection signal="space_pressed" from="BOT_LEFT" to="." method="_on_space_pressed"]
-[connection signal="space_pressed" from="BOT_CENTER" to="." method="_on_space_pressed"]
-[connection signal="space_pressed" from="BOT_RIGHT" to="." method="_on_space_pressed"]
+[connection signal="space_pressed" from="Container/TOP_RIGHT" to="." method="_on_space_pressed"]
+[connection signal="space_pressed" from="Container/TOP_CENTER" to="." method="_on_space_pressed"]
+[connection signal="space_pressed" from="Container/TOP_LEFT" to="." method="_on_space_pressed"]
+[connection signal="space_pressed" from="Container/MID_LEFT" to="." method="_on_space_pressed"]
+[connection signal="space_pressed" from="Container/MID_CENTER" to="." method="_on_space_pressed"]
+[connection signal="space_pressed" from="Container/MID_RIGHT" to="." method="_on_space_pressed"]
+[connection signal="space_pressed" from="Container/BOT_LEFT" to="." method="_on_space_pressed"]
+[connection signal="space_pressed" from="Container/BOT_CENTER" to="." method="_on_space_pressed"]
+[connection signal="space_pressed" from="Container/BOT_RIGHT" to="." method="_on_space_pressed"]

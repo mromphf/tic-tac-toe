@@ -7,6 +7,10 @@ signal space_pressed
 @export var ord: int
 @export var occupant = Game.Occupant.EMPTY
 
+func is_occupied():
+	return occupant != Game.Occupant.EMPTY
+
+
 func occupy(img, occ: Game.Occupant):
 	$ImgHousing.texture = img
 	occupant = occ
