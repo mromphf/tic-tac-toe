@@ -95,3 +95,5 @@ size_flags_horizontal = 0
 ord = 9
 
 [node name="HUD" parent="." instance=ExtResource("4_hytfb")]
+
+[connection signal="play_again" from="HUD" to="." method="_reset"]

@@ -9,25 +9,25 @@ script = ExtResource("1_ye2fm")
 
 [node name="Label" type="Label" parent="."]
 z_index = 1
-offset_left = 4.0
-offset_top = 5.0
-offset_right = 304.0
-offset_bottom = 70.0
+offset_left = 21.0
+offset_top = 17.0
+offset_right = 164.0
+offset_bottom = 82.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 40
-text = "Current Player:"
+text = "Player:"
 
 [node name="Img" type="TextureRect" parent="."]
 z_index = 1
 anchors_preset = -1
-anchor_left = 0.289
-anchor_top = 0.057
-anchor_right = 0.289
-anchor_bottom = 0.057
-offset_left = -27.928
-offset_top = -26.936
-offset_right = 110.072
-offset_bottom = 108.064
+anchor_left = 0.148
+anchor_top = 0.054
+anchor_right = 0.148
+anchor_bottom = 0.054
+offset_left = -10.496
+offset_top = -14.992
+offset_right = 127.504
+offset_bottom = 120.008
 scale = Vector2(0.4, 0.4)
 
 [node name="Draw" type="Label" parent="."]
@@ -43,11 +43,14 @@ text = "DRAW!"
 [node name="VictorC" type="Control" parent="."]
 visible = false
 layout_mode = 3
-anchors_preset = 0
-offset_left = 219.0
-offset_top = 150.0
-offset_right = 927.0
-offset_bottom = 483.0
+anchor_left = 0.497
+anchor_top = 0.53
+anchor_right = 0.497
+anchor_bottom = 0.53
+offset_left = -353.544
+offset_top = -193.44
+offset_right = 354.456
+offset_bottom = 193.56
 
 [node name="Label" type="Label" parent="VictorC"]
 z_index = 1
@@ -76,3 +79,19 @@ offset_top = -150.0
 offset_right = 932.0
 offset_bottom = 499.0
 texture = SubResource("CanvasTexture_jgv6o")
+
+[node name="Button" type="Button" parent="VictorC"]
+z_index = 1
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.51
+anchor_top = 0.776
+anchor_right = 0.51
+anchor_bottom = 0.776
+offset_left = -86.08
+offset_top = -27.312
+offset_right = 85.92
+offset_bottom = 27.688
+text = "Play Again"
+
+[connection signal="pressed" from="VictorC/Button" to="." method="on_play_again"]

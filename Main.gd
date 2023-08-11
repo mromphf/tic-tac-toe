@@ -14,6 +14,13 @@ var imgs = {
 	Game.Occupant.O: img_o
 }
 
+func _reset():
+	for space in $Container.get_children():
+		space.empty()
+		in_progress = true
+	_curr_player = Game.Occupant.X
+	$HUD.on_turn_swap(imgs[_curr_player])
+
 func _board_full():
 	return $Container.get_children() \
 		.all(func(s: Space): return s.is_occupied())
