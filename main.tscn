@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://cvrggtwkp1rr5" path="res://Space.tscn" id="3_37r0c"]
 [ext_resource type="PackedScene" uid="uid://bb307mks8n74m" path="res://HUD.tscn" id="4_hytfb"]
 
-[node name="Main2" type="Node2D" groups=["Spaces"]]
+[node name="Main" type="Node2D" groups=["Spaces"]]
 script = ExtResource("1_mjg8f")
 
 [node name="Background" parent="." instance=ExtResource("2_p3bm5")]
