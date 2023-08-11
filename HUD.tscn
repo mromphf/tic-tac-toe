@@ -92,6 +92,7 @@ offset_left = -86.08
 offset_top = -27.312
 offset_right = 85.92
 offset_bottom = 27.688
+tooltip_text = "Wookies"
 text = "Play Again"
 
 [connection signal="pressed" from="VictorC/Button" to="." method="on_play_again"]

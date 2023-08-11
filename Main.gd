@@ -3,8 +3,6 @@ extends Node2D
 var _curr_player = Game.Occupant.X
 var img_x = preload("res://graphics/x.svg")
 var img_o = preload("res://graphics/o.svg")
-var winner = "Winner! {p}"
-var spaces = []
 var targets = []
 var in_progress = true
 
