@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://b8plob7fmk3rq"]
+[gd_scene load_steps=5 format=3 uid="uid://b8plob7fmk3rq"]
 
 [ext_resource type="Script" path="res://Main.gd" id="1_mjg8f"]
 [ext_resource type="PackedScene" uid="uid://gdim78m0ndhk" path="res://Background.tscn" id="2_p3bm5"]
 [ext_resource type="PackedScene" uid="uid://cvrggtwkp1rr5" path="res://Space.tscn" id="3_37r0c"]
+[ext_resource type="PackedScene" uid="uid://bb307mks8n74m" path="res://HUD.tscn" id="4_hytfb"]
 
 [node name="Main2" type="Node2D" groups=["Spaces"]]
 script = ExtResource("1_mjg8f")
@@ -92,6 +93,8 @@ offset_right = 844.0
 offset_bottom = 576.0
 size_flags_horizontal = 0
 ord = 9
+
+[node name="HUD" parent="." instance=ExtResource("4_hytfb")]
 
 [connection signal="space_pressed" from="Container/TOP_RIGHT" to="." method="_on_space_pressed"]
 [connection signal="space_pressed" from="Container/TOP_CENTER" to="." method="_on_space_pressed"]

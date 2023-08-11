@@ -11,7 +11,7 @@ func is_occupied():
 	return occupant != Game.Occupant.EMPTY
 
 
-func occupy(img, occ: Game.Occupant):
+func occupy(img: Texture2D, occ: Game.Occupant):
 	$ImgHousing.texture = img
 	occupant = occ
 	
