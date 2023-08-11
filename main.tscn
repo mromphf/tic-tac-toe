@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://b8plob7fmk3rq"]
+[gd_scene load_steps=6 format=3 uid="uid://b8plob7fmk3rq"]
 
 [ext_resource type="Script" path="res://Main.gd" id="1_mjg8f"]
 [ext_resource type="PackedScene" uid="uid://gdim78m0ndhk" path="res://Background.tscn" id="2_p3bm5"]
 [ext_resource type="PackedScene" uid="uid://cvrggtwkp1rr5" path="res://Space.tscn" id="3_37r0c"]
 [ext_resource type="PackedScene" uid="uid://bb307mks8n74m" path="res://HUD.tscn" id="4_hytfb"]
+[ext_resource type="AudioStream" uid="uid://ft0qanta0il0" path="res://sfx/fart.mp3" id="5_48gxa"]
 
 [node name="Main" type="Node2D" groups=["Spaces"]]
 script = ExtResource("1_mjg8f")
@@ -95,5 +96,9 @@ size_flags_horizontal = 0
 ord = 9
 
 [node name="HUD" parent="." instance=ExtResource("4_hytfb")]
+
+[node name="Draw" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_48gxa")
+volume_db = -10.182
 
 [connection signal="play_again" from="HUD" to="." method="_reset"]

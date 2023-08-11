@@ -22,5 +22,5 @@ func occupy(img: Texture2D, occ: Game.Occupant):
 
 func _pressed():
 	if occupant == Game.Occupant.EMPTY:
-		$AudioStreamPlayer.play()
+		$Snap.play()
 		emit_signal("space_pressed", self)

@@ -37,6 +37,7 @@ func _on_space_pressed(s: Space):
 			$HUD.on_victory(imgs[_curr_player])
 		
 		elif _board_full():
+			$Draw.play()
 			$HUD.on_draw()
 			
 		_curr_player = Game.Occupant.O if _curr_player == Game.Occupant.X \
