@@ -95,13 +95,3 @@ size_flags_horizontal = 0
 ord = 9
 
 [node name="HUD" parent="." instance=ExtResource("4_hytfb")]
-
-[connection signal="space_pressed" from="Container/TOP_RIGHT" to="." method="_on_space_pressed"]
-[connection signal="space_pressed" from="Container/TOP_CENTER" to="." method="_on_space_pressed"]
-[connection signal="space_pressed" from="Container/TOP_LEFT" to="." method="_on_space_pressed"]
-[connection signal="space_pressed" from="Container/MID_LEFT" to="." method="_on_space_pressed"]
-[connection signal="space_pressed" from="Container/MID_CENTER" to="." method="_on_space_pressed"]
-[connection signal="space_pressed" from="Container/MID_RIGHT" to="." method="_on_space_pressed"]
-[connection signal="space_pressed" from="Container/BOT_LEFT" to="." method="_on_space_pressed"]
-[connection signal="space_pressed" from="Container/BOT_CENTER" to="." method="_on_space_pressed"]
-[connection signal="space_pressed" from="Container/BOT_RIGHT" to="." method="_on_space_pressed"]

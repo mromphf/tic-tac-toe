@@ -40,6 +40,8 @@ func _on_space_pressed(s: Space):
 
 func _ready():
 	$HUD.on_turn_swap(imgs[_curr_player])
+	for space in $Container.get_children():
+		space.connect("space_pressed", _on_space_pressed)
 	
 	targets = 	[	
 		[$Container/TOP_RIGHT, $Container/TOP_CENTER, $Container/TOP_LEFT],

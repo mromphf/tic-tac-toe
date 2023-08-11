@@ -8,6 +8,7 @@
 script = ExtResource("1_ye2fm")
 
 [node name="Label" type="Label" parent="."]
+z_index = 1
 offset_left = 4.0
 offset_top = 5.0
 offset_right = 304.0
@@ -17,6 +18,7 @@ theme_override_font_sizes/font_size = 40
 text = "Current Player:"
 
 [node name="Img" type="TextureRect" parent="."]
+z_index = 1
 anchors_preset = -1
 anchor_left = 0.289
 anchor_top = 0.057
@@ -56,7 +58,7 @@ offset_right = 456.0
 offset_bottom = 210.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 100
-text = "Winner!"
+text = "Victory!"
 
 [node name="VictorImg" type="TextureRect" parent="VictorC"]
 z_index = 1
@@ -67,8 +69,10 @@ offset_right = 607.0
 offset_bottom = 223.0
 
 [node name="TextureRect" type="TextureRect" parent="VictorC"]
-modulate = Color(0.611765, 0.780392, 0.992157, 1)
+modulate = Color(0.960784, 0.960784, 0.960784, 0.854902)
 layout_mode = 0
-offset_right = 725.0
-offset_bottom = 330.0
+offset_left = -219.0
+offset_top = -150.0
+offset_right = 932.0
+offset_bottom = 499.0
 texture = SubResource("CanvasTexture_jgv6o")

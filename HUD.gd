@@ -5,6 +5,8 @@ class_name HUD
 func on_victory(img: Texture2D):
 	$VictorC.visible = true
 	$VictorC/VictorImg.texture = img
+	$Label.visible = false
+	$Img.visible = false
 	
 
 func on_draw():
