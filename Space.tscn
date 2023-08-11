@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://cvrggtwkp1rr5"]
+[gd_scene load_steps=3 format=3 uid="uid://cvrggtwkp1rr5"]
 
 [ext_resource type="Script" path="res://Space.gd" id="1_qcyhg"]
+[ext_resource type="AudioStream" uid="uid://dxdx1c3xq40ab" path="res://sfx/snap.mp3" id="2_drogo"]
 
 [node name="Space" type="TextureButton"]
 offset_left = -78.0
@@ -13,3 +14,7 @@ script = ExtResource("1_qcyhg")
 layout_mode = 0
 offset_right = 156.0
 offset_bottom = 154.0
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_drogo")
+volume_db = -15.0
