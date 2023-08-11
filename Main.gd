@@ -5,18 +5,9 @@ var img_x = preload("res://graphics/x.svg")
 var img_o = preload("res://graphics/o.svg")
 var winner = "Winner! {p}"
 var spaces = []
+var targets = []
 var in_progress = true
 
-var targets = [
-	[1, 2, 3],
-	[4, 5, 6],
-	[7, 8, 9],
-	[1, 4, 7],
-	[2, 5, 8],
-	[3, 6, 9],
-	[1, 5, 9],
-	[3, 5, 7]
-]
 
 var imgs = {
 	Game.Occupant.X: img_x,
@@ -24,17 +15,20 @@ var imgs = {
 }
 
 func _board_full():
-	return spaces.all(func(s: Space): return s.is_occupied())
+	return $Container.get_children() \
+		.all(func(s: Space): return s.is_occupied())
+	
+func _victory():
+	return targets.any(func(group: Array): return \
+		group.all(func(s: Space): return s.occupant == _curr_player))
 
 func _on_space_pressed(s: Space):
 	if in_progress:
 		s.occupy(imgs[_curr_player], _curr_player)
 		
-		for t in targets:
-			if spaces.filter(func(s: Space): return s.ord in t) \
-				.all(func(s: Space): return s.occupant == _curr_player):
-					in_progress = false
-					$HUD.on_victory(imgs[_curr_player])
+		if _victory():
+			in_progress = false
+			$HUD.on_victory(imgs[_curr_player])
 		
 		if _board_full():
 			$HUD.on_draw()
@@ -45,5 +39,15 @@ func _on_space_pressed(s: Space):
 
 
 func _ready():
-	spaces = $Container.get_children()
 	$HUD.on_turn_swap(imgs[_curr_player])
+	
+	targets = 	[	
+		[$Container/TOP_RIGHT, $Container/TOP_CENTER, $Container/TOP_LEFT],
+		[$Container/MID_RIGHT, $Container/MID_CENTER, $Container/MID_LEFT],
+		[$Container/BOT_RIGHT, $Container/BOT_CENTER, $Container/BOT_LEFT],
+		[$Container/TOP_RIGHT, $Container/MID_RIGHT, $Container/BOT_RIGHT],
+		[$Container/TOP_CENTER, $Container/MID_CENTER, $Container/BOT_CENTER],
+		[$Container/TOP_LEFT, $Container/MID_LEFT, $Container/BOT_LEFT],
+		[$Container/TOP_RIGHT, $Container/MID_CENTER, $Container/BOT_LEFT],
+		[$Container/TOP_LEFT, $Container/MID_CENTER, $Container/BOT_RIGHT]
+	]
