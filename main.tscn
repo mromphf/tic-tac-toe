@@ -1,10 +1,12 @@
-[gd_scene load_steps=6 format=3 uid="uid://b8plob7fmk3rq"]
+[gd_scene load_steps=8 format=3 uid="uid://b8plob7fmk3rq"]
 
 [ext_resource type="Script" path="res://Main.gd" id="1_mjg8f"]
 [ext_resource type="PackedScene" uid="uid://gdim78m0ndhk" path="res://Background.tscn" id="2_p3bm5"]
 [ext_resource type="PackedScene" uid="uid://cvrggtwkp1rr5" path="res://Space.tscn" id="3_37r0c"]
 [ext_resource type="PackedScene" uid="uid://bb307mks8n74m" path="res://HUD.tscn" id="4_hytfb"]
 [ext_resource type="AudioStream" uid="uid://ft0qanta0il0" path="res://sfx/fart.mp3" id="5_48gxa"]
+[ext_resource type="AudioStream" uid="uid://dy1n4smbdvht8" path="res://sfx/applause.mp3" id="6_6nxfr"]
+[ext_resource type="AudioStream" uid="uid://1pkf6bfhnooe" path="res://sfx/success.mp3" id="7_mhmn4"]
 
 [node name="Main" type="Node2D" groups=["Spaces"]]
 script = ExtResource("1_mjg8f")
@@ -100,5 +102,13 @@ ord = 9
 [node name="Draw" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("5_48gxa")
 volume_db = -10.182
+
+[node name="Applause" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_6nxfr")
+volume_db = -20.0
+
+[node name="Success" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_mhmn4")
+volume_db = -10.0
 
 [connection signal="play_again" from="HUD" to="." method="_reset"]

@@ -8,6 +8,7 @@ func on_play_again():
 	$VictorC.visible = false
 	$Label.visible = true
 	$Img.visible = true
+	$Snap.play()
 	emit_signal("play_again")
 
 

@@ -17,6 +17,7 @@ func _reset():
 	_curr_player = Game.Occupant.X
 	$HUD.on_turn_swap(imgs[_curr_player])
 	
+	
 	for space in $Container.get_children():
 		space.empty()
 
@@ -34,6 +35,8 @@ func _on_space_pressed(s: Space):
 		
 		if _victory():
 			in_progress = false
+			$Applause.play()
+			$Success.play()
 			$HUD.on_victory(imgs[_curr_player])
 		
 		elif _board_full():
