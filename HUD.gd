@@ -5,22 +5,18 @@ class_name HUD
 signal play_again
 
 func on_play_again():
-	$VictorC.visible = false
-	$Label.visible = true
-	$Img.visible = true
+	$Outcome.visible = false
 	$Snap.play()
 	emit_signal("play_again")
 
 
-func on_victory(img: Texture2D):
-	$VictorC.visible = true
-	$VictorC/VictorImg.texture = img
-	$Label.visible = false
-	$Img.visible = false
-	
+func render_outcome(img: Texture2D, draw: bool = false):
+	$Outcome.visible = true
+	$Outcome/Draw.visible = draw
+	$Outcome/Victory.visible = not draw
+	if not draw:
+		$Outcome/Victory/Player.set_texture(img)
 
-func on_draw():
-	$Draw.visible = true
 
 func on_turn_swap(img: Texture2D):
-	$Img.texture = img
+	$PlayerSprite.set_texture(img)

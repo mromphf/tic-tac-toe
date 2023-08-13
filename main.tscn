@@ -21,79 +21,79 @@ offset_bottom = 40.0
 
 [node name="TOP_RIGHT" parent="Container" instance=ExtResource("3_37r0c")]
 layout_mode = 2
-offset_left = 691.0
-offset_top = 79.0
-offset_right = 844.0
-offset_bottom = 228.0
+offset_left = 734.0
+offset_top = 78.0
+offset_right = 887.0
+offset_bottom = 227.0
 ord = 3
 
 [node name="TOP_CENTER" parent="Container" instance=ExtResource("3_37r0c")]
 layout_mode = 2
-offset_left = 523.0
+offset_left = 563.0
 offset_top = 75.0
-offset_right = 676.0
+offset_right = 716.0
 offset_bottom = 224.0
 ord = 2
 
 [node name="TOP_LEFT" parent="Container" instance=ExtResource("3_37r0c")]
 layout_mode = 2
-offset_left = 352.0
-offset_top = 76.0
-offset_right = 505.0
-offset_bottom = 225.0
+offset_left = 392.0
+offset_top = 75.0
+offset_right = 545.0
+offset_bottom = 224.0
 ord = 1
 
 [node name="MID_LEFT" parent="Container" instance=ExtResource("3_37r0c")]
 layout_mode = 2
-offset_left = 347.0
+offset_left = 390.0
 offset_top = 245.0
-offset_right = 500.0
+offset_right = 543.0
 offset_bottom = 394.0
 size_flags_horizontal = 0
 ord = 4
 
 [node name="MID_CENTER" parent="Container" instance=ExtResource("3_37r0c")]
 layout_mode = 2
-offset_left = 524.0
+offset_left = 566.0
 offset_top = 245.0
-offset_right = 677.0
+offset_right = 719.0
 offset_bottom = 394.0
 size_flags_horizontal = 0
 ord = 5
 
 [node name="MID_RIGHT" parent="Container" instance=ExtResource("3_37r0c")]
 layout_mode = 2
-offset_left = 699.0
-offset_top = 246.0
-offset_right = 852.0
-offset_bottom = 395.0
+offset_left = 741.0
+offset_top = 245.0
+offset_right = 894.0
+offset_bottom = 394.0
 size_flags_horizontal = 0
 ord = 6
 
 [node name="BOT_LEFT" parent="Container" instance=ExtResource("3_37r0c")]
 layout_mode = 2
-offset_left = 350.0
-offset_top = 416.0
-offset_right = 503.0
-offset_bottom = 565.0
+offset_left = 390.0
+offset_top = 419.0
+offset_right = 543.0
+offset_bottom = 568.0
 size_flags_horizontal = 0
 ord = 7
 
 [node name="BOT_CENTER" parent="Container" instance=ExtResource("3_37r0c")]
 layout_mode = 2
-offset_left = 524.0
-offset_top = 416.0
-offset_right = 677.0
-offset_bottom = 565.0
+offset_left = 564.0
+offset_top = 417.0
+offset_right = 717.0
+offset_bottom = 566.0
 size_flags_horizontal = 0
 ord = 8
 
 [node name="BOT_RIGHT" parent="Container" instance=ExtResource("3_37r0c")]
 layout_mode = 2
-offset_left = 699.0
-offset_top = 418.0
-offset_right = 852.0
-offset_bottom = 567.0
+offset_left = 738.0
+offset_top = 417.0
+offset_right = 891.0
+offset_bottom = 566.0
 size_flags_horizontal = 0
 ord = 9
 
