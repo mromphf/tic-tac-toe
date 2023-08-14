@@ -62,6 +62,7 @@ text = "Victory!"
 position = Vector2(440, 80)
 
 [node name="Draw" type="Label" parent="Outcome"]
+layout_mode = 0
 offset_left = 240.0
 offset_top = 40.0
 offset_right = 640.0
